@@ -1,4 +1,4 @@
-# 🗜️ Super Compressor - Premium Client-Side Image Compression
+# 🗜️ Super Codec - Premium Client-Side Media Toolkit
 
 [![Vite](https://img.shields.io/badge/Frontend-Vite%20%2B%20React%2019-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS%20v4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -8,9 +8,9 @@
 
 🚀 **Live Demo:** [super-compressor-blond.vercel.app](https://super-compressor-blond.vercel.app/)
 
-**Super Compressor** is a modern, premium Single Page Application (SPA) designed to reduce image file sizes without sacrificing visual quality. Built entirely on the client-side, the platform ensures 100% privacy because your images never leave your browser—all processing is handled securely by your device's CPU.
+**Super Codec** is a modern, premium Single Page Application (SPA) designed to reduce image, audio, and video file sizes without sacrificing quality, and includes Steganography features. Built entirely on the client-side, the platform ensures 100% privacy because your media files never leave your browser—all processing is handled securely by your device's CPU and WebAssembly.
 
-Leveraging the power of **browser-image-compression** and wrapped in a stunning, Discord-inspired dark mode UI, Super Compressor delivers a seamless, lightning-fast, and highly intuitive media optimization experience.
+Leveraging the power of **browser-image-compression**, **FFmpeg (WASM)**, and wrapped in a stunning, Discord-inspired dark mode UI, Super Codec delivers a seamless, lightning-fast, and highly intuitive media optimization experience.
 
 ---
 
@@ -31,7 +31,7 @@ Leveraging the power of **browser-image-compression** and wrapped in a stunning,
 
 ## 🛠️ Tech Stack & Architecture
 
-Super Compressor adopts a modern, lightweight, client-side only architecture:
+Super Codec adopts a modern, lightweight, client-side only architecture:
 
 ### 💻 Frontend (Client)
 | Technology | Description |
@@ -40,13 +40,14 @@ Super Compressor adopts a modern, lightweight, client-side only architecture:
 | **Vite 8** | Ultra-fast build tool and development server. |
 | **Tailwind CSS v4** | Utility-first CSS framework used to build the custom "Discord-inspired" dark mode design system. |
 | **browser-image-compression** | Core library handling the complex algorithms to shrink image files natively via Web Workers. |
+| **@ffmpeg/ffmpeg** | WebAssembly implementation of FFmpeg used to compress audio and video files directly in the browser. |
 | **Lucide React** | Clean, modern, and lightweight SVG icon library. |
 
 ---
 
 ## 🚀 Getting Started
 
-Follow these steps to run Super Compressor locally on your machine:
+Follow these steps to run Super Codec locally on your machine:
 
 ### 1. Prerequisites
 Ensure you have the following installed:

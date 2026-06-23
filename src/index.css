@@ -45,12 +45,12 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-discord-primary text-discord-onPrimary h-9 px-3 py-0.5 rounded-md text-[14px] font-medium transition-colors duration-150 ease-in-out hover:bg-discord-primaryHover disabled:opacity-50 flex items-center justify-center;
+    @apply bg-discord-primary text-discord-onPrimary h-9 px-3 py-0.5 rounded-md text-[14px] font-medium transition-colors duration-150 ease-in-out hover:bg-discord-primaryHover disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center;
   }
   
   .btn-gradient {
     /* Since we're dropping gradients per user request, this is just a primary button now */
-    @apply bg-discord-primary text-discord-onPrimary h-9 px-3 py-0.5 rounded-md text-[14px] font-medium transition-all duration-150 ease-in-out hover:bg-discord-primaryHover disabled:opacity-50 flex items-center justify-center;
+    @apply bg-discord-primary text-discord-onPrimary h-9 px-3 py-0.5 rounded-md text-[14px] font-medium transition-all duration-150 ease-in-out hover:bg-discord-primaryHover disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center;
   }
 
   .btn-gradient:hover:not(:disabled) {
@@ -58,7 +58,7 @@
   }
 
   .btn-secondary {
-    @apply bg-discord-surface2 border border-discord-border text-discord-ink h-9 px-3 py-0.5 rounded-md text-[14px] font-medium shadow-level-1 transition-colors duration-150 ease-in-out hover:bg-discord-surface3 disabled:opacity-50 flex items-center justify-center;
+    @apply bg-discord-surface2 border border-discord-border text-discord-ink h-9 px-3 py-0.5 rounded-md text-[14px] font-medium shadow-level-1 transition-colors duration-150 ease-in-out hover:bg-discord-surface3 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center;
   }
 
   .card {
