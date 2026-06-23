@@ -42,8 +42,8 @@ export function AudioVideoPanel() {
       ) : (
         <div className="bg-discord-surface1 rounded-[16px] p-6 border border-discord-border shadow-level-2 max-w-4xl mx-auto mt-8">
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div className="flex justify-between items-center bg-discord-surface2 p-4 rounded-xl border border-discord-border">
-              <div className="flex flex-col min-w-0">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-discord-surface2 p-4 rounded-xl border border-discord-border w-full">
+              <div className="flex flex-col min-w-0 w-full sm:w-auto">
                 <span className="font-semibold text-discord-onPrimary truncate mr-4">
                   {file.name}
                 </span>
@@ -53,7 +53,7 @@ export function AudioVideoPanel() {
               </div>
               <button
                 onClick={handleReset}
-                className="text-sm px-4 py-2 bg-discord-surface3 hover:bg-discord-surface3Hover text-discord-onPrimary rounded-lg transition-colors"
+                className="text-sm px-4 py-2 bg-discord-surface3 hover:bg-discord-surface3Hover text-discord-onPrimary rounded-lg transition-colors w-full sm:w-auto"
               >
                 Upload Different File
               </button>
@@ -92,7 +92,7 @@ export function AudioVideoPanel() {
                 
                 <div className="bg-black/40 rounded-lg overflow-hidden flex justify-center p-4">
                   {fileType === 'video' ? (
-                    <video src={resultUrl} controls className="max-h-[300px] rounded" />
+                    <video src={resultUrl} controls className="max-w-full max-h-[300px] rounded" />
                   ) : (
                     <audio src={resultUrl} controls className="w-full" />
                   )}
