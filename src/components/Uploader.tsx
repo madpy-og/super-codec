@@ -93,7 +93,7 @@ export function Uploader({
   return (
     <div className="w-full h-full">
       <div
-        className={`border-2 border-dashed rounded-xl p-10 flex flex-col items-center justify-center transition-all duration-200 cursor-pointer ${isDragging
+        className={`border-1 md:border-2 border-dashed rounded-xl p-10 flex flex-col items-center justify-center transition-all duration-200 cursor-pointer ${isDragging
           ? 'border-discord-primary bg-discord-primary/10 scale-[1.02]'
           : 'border-discord-border hover:border-discord-primary/50 bg-discord-surface1'
           }`}

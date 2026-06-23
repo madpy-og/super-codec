@@ -25,7 +25,7 @@ export function AudioVideoPanel() {
   return (
     <>
       {!file ? (
-        <div className="bg-discord-surface1 rounded-[16px] p-6 md:p-8 border border-discord-border max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 shadow-level-2 mt-8">
+        <div className="bg-discord-surface1 rounded-[16px] p-4 md:p-8 border border-discord-border max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 shadow-level-2 mt-8">
           <div className="hidden md:block flex-1 pr-4">
             <h2 className="text-2xl font-bold text-discord-onPrimary mb-3">
               Compress Audio & Video
@@ -84,12 +84,12 @@ export function AudioVideoPanel() {
                   <div>
                     <h3 className="text-green-400 font-bold text-lg">Compression Complete!</h3>
                     <p className="text-discord-onPrimary/80">
-                      Size reduced from {formatSize(file.size)} to {formatSize(resultFile.size)} 
+                      Size reduced from {formatSize(file.size)} to {formatSize(resultFile.size)}
                       ({Math.round((1 - resultFile.size / file.size) * 100)}% smaller)
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="bg-black/40 rounded-lg overflow-hidden flex justify-center p-4">
                   {fileType === 'video' ? (
                     <video src={resultUrl} controls className="max-w-full max-h-[300px] rounded" />
@@ -97,9 +97,9 @@ export function AudioVideoPanel() {
                     <audio src={resultUrl} controls className="w-full" />
                   )}
                 </div>
-                
-                <a 
-                  href={resultUrl} 
+
+                <a
+                  href={resultUrl}
                   download={resultFile.name}
                   className="btn-primary w-full h-12 text-base font-bold"
                 >

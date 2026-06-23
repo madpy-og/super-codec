@@ -22,15 +22,15 @@ export function SteganoPanel() {
   return (
     <div className="bg-discord-surface1 rounded-[16px] p-6 border border-discord-border shadow-level-2 max-w-4xl mx-auto mt-8">
       <div className="flex justify-center mb-8">
-        <div className="bg-discord-surface1 p-1.5 rounded-xl flex flex-col sm:flex-row shadow-level-1 border border-discord-border w-full sm:w-auto gap-1 sm:gap-0">
+        <div className="bg-discord-surface1 p-1.5 rounded-xl flex flex-col md:flex-row shadow-level-1 border border-discord-border w-full md:w-auto gap-1 md:gap-0">
           <button
-            className={`flex-1 px-4 py-3 sm:py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${mode === 'encode' ? 'bg-discord-surface2 text-discord-onPrimary shadow-md' : 'text-discord-inkMuted hover:text-discord-onPrimary hover:bg-discord-surface2'}`}
+            className={`flex-1 whitespace-nowrap px-3 md:px-4 py-3 md:py-2.5 rounded-lg font-medium text-[13px] md:text-sm transition-all duration-200 ${mode === 'encode' ? 'bg-discord-surface2 text-discord-onPrimary shadow-md' : 'text-discord-inkMuted hover:text-discord-onPrimary hover:bg-discord-surface2'}`}
             onClick={() => { setMode('encode'); resetAll(); }}
           >
             Encode (Hide Message)
           </button>
           <button
-            className={`flex-1 px-4 py-3 sm:py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${mode === 'decode' ? 'bg-discord-surface2 text-discord-onPrimary shadow-md' : 'text-discord-inkMuted hover:text-discord-onPrimary hover:bg-discord-surface2'}`}
+            className={`flex-1 whitespace-nowrap px-3 md:px-4 py-3 md:py-2.5 rounded-lg font-medium text-[13px] md:text-sm transition-all duration-200 ${mode === 'decode' ? 'bg-discord-surface2 text-discord-onPrimary shadow-md' : 'text-discord-inkMuted hover:text-discord-onPrimary hover:bg-discord-surface2'}`}
             onClick={() => { setMode('decode'); resetAll(); }}
           >
             Decode (Extract Message)

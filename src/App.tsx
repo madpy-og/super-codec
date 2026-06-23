@@ -18,37 +18,34 @@ function App() {
       {/* Main Content Area */}
       <div className="flex-grow pb-24 px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
         <div className="max-w-5xl mx-auto scroll-mt-24" id="tools">
-          
+
           {/* Tabs Navigation */}
-          <div className="flex justify-center mb-8 overflow-x-auto pb-4 hide-scrollbar">
-            <div className="bg-discord-surface1 p-1.5 rounded-xl flex shadow-level-1 border border-discord-border whitespace-nowrap min-w-max">
+          <div className="flex justify-center mb-8">
+            <div className="bg-discord-surface1 p-1.5 rounded-xl flex flex-col md:flex-row shadow-level-1 border border-discord-border w-full md:w-auto gap-1 md:gap-0">
               <button
                 onClick={() => setActiveTab('image')}
-                className={`px-6 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${
-                  activeTab === 'image' 
-                    ? 'bg-discord-surface2 text-discord-onPrimary shadow-md' 
+                className={`flex-1 whitespace-nowrap px-3 md:px-4 py-3 md:py-2.5 rounded-lg font-medium text-[13px] md:text-sm transition-all duration-200 ${activeTab === 'image'
+                    ? 'bg-discord-surface2 text-discord-onPrimary shadow-md'
                     : 'text-discord-inkMuted hover:text-discord-onPrimary hover:bg-discord-surface2'
-                }`}
+                  }`}
               >
                 Image Codec
               </button>
               <button
                 onClick={() => setActiveTab('audiovideo')}
-                className={`px-6 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${
-                  activeTab === 'audiovideo' 
-                    ? 'bg-discord-surface2 text-discord-onPrimary shadow-md' 
+                className={`flex-1 whitespace-nowrap px-3 md:px-4 py-3 md:py-2.5 rounded-lg font-medium text-[13px] md:text-sm transition-all duration-200 ${activeTab === 'audiovideo'
+                    ? 'bg-discord-surface2 text-discord-onPrimary shadow-md'
                     : 'text-discord-inkMuted hover:text-discord-onPrimary hover:bg-discord-surface2'
-                }`}
+                  }`}
               >
                 Audio / Video Codec
               </button>
               <button
                 onClick={() => setActiveTab('stegano')}
-                className={`px-6 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 ${
-                  activeTab === 'stegano' 
-                    ? 'bg-discord-surface2 text-discord-onPrimary shadow-md' 
+                className={`flex-1 whitespace-nowrap px-3 md:px-4 py-3 md:py-2.5 rounded-lg font-medium text-[13px] md:text-sm transition-all duration-200 ${activeTab === 'stegano'
+                    ? 'bg-discord-surface2 text-discord-onPrimary shadow-md'
                     : 'text-discord-inkMuted hover:text-discord-onPrimary hover:bg-discord-surface2'
-                }`}
+                  }`}
               >
                 Steganography
               </button>
