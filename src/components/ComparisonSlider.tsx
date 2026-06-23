@@ -18,7 +18,7 @@ export function ComparisonSlider() {
       <div className="relative w-full aspect-square sm:aspect-[4/3] md:aspect-[21/9] rounded-2xl overflow-hidden shadow-level-2 border border-discord-border bg-discord-surface1 select-none">
 
         {/* Base Image (Original - Left Side of Slider) */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full z-10">
           <img
             src={originalImage}
             alt="Original high resolution"
@@ -32,7 +32,7 @@ export function ComparisonSlider() {
 
         {/* Overlay Image (Compressed - Right Side of Slider) */}
         <div
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full z-20"
           style={{ clipPath: `inset(0 0 0 ${sliderValue}%)` }}
         >
           <img
@@ -48,7 +48,7 @@ export function ComparisonSlider() {
 
         {/* The Divider Line */}
         <div
-          className="absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_10px_rgba(0,0,0,0.5)] z-20 pointer-events-none flex items-center justify-center"
+          className="absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_10px_rgba(0,0,0,0.5)] z-30 pointer-events-none flex items-center justify-center"
           style={{ left: `calc(${sliderValue}% - 2px)` }}
         >
           {/* Handle */}
@@ -64,7 +64,7 @@ export function ComparisonSlider() {
           max="100"
           value={sliderValue}
           onChange={(e) => setSliderValue(Number(e.target.value))}
-          className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
+          className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-40"
           aria-label="Image comparison slider"
         />
 
