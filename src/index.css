@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-discord-primary: #5865F2;
+  --color-discord-onPrimary: #ffffff;
+  --color-discord-primaryHover: #4752C4;
+  --color-discord-secondary: #57F287;
+  --color-discord-accentYellow: #FEE75C;
+  --color-discord-accentRed: #ED4245;
+  --color-discord-ink: #DBDEE1;
+  --color-discord-inkMuted: #949BA4;
+  --color-discord-canvas: #313338;
+  --color-discord-surface1: #2B2D31;
+  --color-discord-surface2: #1E1F22;
+  --color-discord-surface3: #111214;
+  --color-discord-border: #3F4147;
+  --color-discord-online: #23A55A;
+  --color-discord-idle: #F0B232;
+  --color-discord-dnd: #F23F43;
+  --color-discord-offline: #80848E;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  --shadow-level-1: 0 1px 2px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-level-2: 0 4px 8px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.2);
+  --shadow-level-3: 0 12px 24px rgba(0,0,0,0.3), 0 4px 8px rgba(0,0,0,0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-discord-canvas text-discord-ink font-sans antialiased;
+  }
+
+  button, a {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-discord-primary text-discord-onPrimary h-9 px-3 py-0.5 rounded-md text-[14px] font-medium transition-colors duration-150 ease-in-out hover:bg-discord-primaryHover disabled:opacity-50 flex items-center justify-center;
+  }
+  
+  .btn-gradient {
+    /* Since we're dropping gradients per user request, this is just a primary button now */
+    @apply bg-discord-primary text-discord-onPrimary h-9 px-3 py-0.5 rounded-md text-[14px] font-medium transition-all duration-150 ease-in-out hover:bg-discord-primaryHover disabled:opacity-50 flex items-center justify-center;
+  }
+
+  .btn-gradient:hover:not(:disabled) {
+    box-shadow: 0 4px 12px rgba(88,101,242,0.3);
+  }
+
+  .btn-secondary {
+    @apply bg-discord-surface2 border border-discord-border text-discord-ink h-9 px-3 py-0.5 rounded-md text-[14px] font-medium shadow-level-1 transition-colors duration-150 ease-in-out hover:bg-discord-surface3 disabled:opacity-50 flex items-center justify-center;
+  }
+
+  .card {
+    @apply bg-discord-surface1 border border-discord-border rounded-xl p-6 shadow-level-2 transition-shadow duration-200 ease-in-out;
+  }
+
+  .card-hover {
+    @apply hover:shadow-level-2;
+  }
+
+  .input-field {
+    @apply h-10 bg-discord-surface2 border border-discord-border rounded-md px-3 text-[15px] text-discord-ink transition-all duration-150 outline-none focus:border-discord-primary focus:ring-[3px] focus:ring-discord-primary/20;
+  }
+
+  .label-text {
+    @apply block text-[13px] font-medium text-discord-inkMuted mb-1;
+  }
+}
